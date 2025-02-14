@@ -1,7 +1,7 @@
 import SideProfile from "@/components/SideProfile";
 import React from "react";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div>
       <SideProfile />
