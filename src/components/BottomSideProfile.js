@@ -5,11 +5,11 @@ import Instagram from "@/svg/Instagram";
 
 const BottomSideProfile = () => {
   return (
-    <div>
+    <button className=" flex gap-5 mb-10">
       <LinkedIn />
       <Instagram />
       <Github />
-    </div>
+    </button>
   );
 };
 

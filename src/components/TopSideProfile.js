@@ -4,13 +4,18 @@ import Image from "next/image";
 
 const TopSideProfile = () => {
   return (
-    <div className=" text-white flex flex-col gap-4">
+    <div className=" text-white flex flex-col gap-4 justify-center items-center">
       <div>
-        <Image alt="avatar" src={ProfilePic} width={100} />
+        <Image
+          alt="avatar"
+          src={ProfilePic}
+          width={120}
+          className=" rounded-[20px]"
+        />
       </div>
-      <div>
-        <p>Alungoo</p>
-        <span className=" p-1 bg-gray-500 border rounded-lg">
+      <div className=" flex flex-col gap-4 items-center">
+        <p>Alungoo.T</p>
+        <span className=" px-2 p-1 bg-[#2b2b2c] border rounded-lg border-[#383838]">
           Full Stack Engineer
         </span>
       </div>
