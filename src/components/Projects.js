@@ -21,16 +21,22 @@ const projects = [
   },
   {
     id: "4",
-    title: "Fruit Project",
-    description: "A project related to fruits",
-    url: "https://6-fruit-project.vercel.app/",
+    title: "Blog Project",
+    description: "A project demonstrating a dynamic blog web",
+    url: "https://blog-project-beta-flame.vercel.app/",
   },
 ];
 
 export default function Projects() {
   return (
-    <div className="container  py-12">
-      <div className="grid grid-cols-2  gap-6">
+    <div className="container px-10">
+      <div className=" mb-4 flex flex-col gap-4">
+        <div className=" text-white text-[30px] font-bold text-right mr-9">
+          Projects
+        </div>
+        <div className=" border-[4px]  border-[#FF00FF] rounded-md ml-[780px] w-[50px]"></div>
+      </div>
+      <div className="grid grid-cols-2  gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

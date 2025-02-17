@@ -6,46 +6,35 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 
 const MainMenuHeader = () => {
-  const [showComponent, setShowComponent] = useState("About");
-  const buttonStyle = (component) =>
-    `text-[#d6d6d6] hover:text-[#cc00FF] duration-200 p-4 ${
-      showComponent === component ? "active:text-[#FF00FF]" : ""
-    }`;
+  const [activeComponent, setActiveComponent] = useState("About");
+
+  const menuItems = ["About", "Resume", "Projects", "Contact"];
+
   return (
     <>
-      <header className="w-[400px] h-[70px] bg-[#2b2b2c] rounded-br-2xl rounded-tl-[20px] border border-[#383838] items-center flex justify-evenly ">
-        <div className="text-lg ">
-          <button
-            className={buttonStyle("About")}
-            onClick={() => setShowComponent("About")}
-          >
-            About
-          </button>
-          <button
-            className={buttonStyle("Resume")}
-            onClick={() => setShowComponent("Resume")}
-          >
-            Resume
-          </button>
-          <button
-            className={buttonStyle("Projects")}
-            onClick={() => setShowComponent("Projects")}
-          >
-            Projects
-          </button>
-          <button
-            className={buttonStyle("Contact")}
-            onClick={() => setShowComponent("Contact")}
-          >
-            Contact
-          </button>
-        </div>
+      <header className="w-[400px] h-[70px] bg-[#2b2b2c] rounded-br-2xl rounded-tl-[20px] border border-[#383838] items-center flex justify-evenly">
+        <nav className="text-lg flex space-x-2">
+          {menuItems.map((item) => (
+            <button
+              key={item}
+              className={`px-4 py-2 rounded-md transition-colors ${
+                activeComponent === item
+                  ? "text-[#ff00ff]"
+                  : "text-white hover:text-[#cc00ff]"
+              }`}
+              onClick={() => setActiveComponent(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </nav>
       </header>
-      <div className=" ">{showComponent === "About" && <About />}</div>
-
-      {showComponent === "Resume" && <Resume />}
-      {showComponent === "Projects" && <Projects />}
-      {showComponent === "COntact" && <Contact />}
+      <main className="mt-4">
+        {activeComponent === "About" && <About />}
+        {activeComponent === "Resume" && <Resume />}
+        {activeComponent === "Projects" && <Projects />}
+        {activeComponent === "Contact" && <Contact />}
+      </main>
     </>
   );
 };

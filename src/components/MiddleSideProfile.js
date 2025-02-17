@@ -16,9 +16,14 @@ const MiddleSideProfile = () => {
           className=" bg-[#202022] p-2 rounded-[12px] z-10 shadow-md border-[1px] shadow-[#2b2b30] border-[#3a3a3b]"
         />
 
-        <div>
+        <div className=" cursor-pointer">
           <p className=" text-gray-600">EMAIL</p>
-          <p className=" text-white">alungoo976@gmail.com</p>
+          <a
+            href="https://apps.apple.com/us/app/gmail-email-by-google/id422689480"
+            className=" text-white"
+          >
+            alungoo976@gmail.com
+          </a>
         </div>
       </div>
       <div className=" flex flex-row gap-5 items-center">

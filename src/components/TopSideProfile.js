@@ -15,8 +15,8 @@ const TopSideProfile = () => {
       </div>
       <div className=" flex flex-col gap-4 items-center">
         <p>Alungoo.T</p>
-        <span className=" px-2 p-1 bg-[#2b2b2c] border rounded-lg border-[#383838]">
-          Full Stack Engineer
+        <span className=" px-3 p-1 bg-[#2b2b2c] border rounded-lg border-[#383838]">
+          Full Stack Developer
         </span>
       </div>
     </div>
